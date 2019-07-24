@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.teamList {
+  width: 33%;
+  margin: 0 auto;
+}

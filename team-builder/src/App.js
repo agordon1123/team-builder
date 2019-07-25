@@ -17,8 +17,8 @@ function App() {
       <Form teamAdd={teamChange} />
       <h2>View your team members below</h2>
       <>
-        {teamArray.map((member, i) => (
-          <TeamMemberList key={i} props={member} />
+        {team.map((member, i) => (
+          <TeamMemberList key={i} newMember={member} />
         ))}
       </>
     </div>

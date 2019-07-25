@@ -1,3 +1,8 @@
+Lets break down our App's form functionality:
+
+First, in App.js, we import the data (teamArray) from the relative path. Also import useState. In the return portion of the App, we map over the data (an array of objects) and create a component for each index of the array. Now would be a good time to set up our component.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

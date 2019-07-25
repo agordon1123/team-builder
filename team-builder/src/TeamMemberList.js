@@ -1,13 +1,13 @@
 import React from 'react';
 
-const TeamMemberList = ({props}) => {
-    console.log('props', props)
+const TeamMemberList = ({newMember}) => {
+    console.log('props', newMember)
     return (
         <div>
-            <div class='divider' />
-            <h3>Name: {props.name}</h3>
-            <h3>Email: {props.email}</h3>
-            <h3>Role: {props.role}</h3>
+            <div className='divider' />
+            <h3>Name: {newMember.name}</h3>
+            <h3>Email: {newMember.email}</h3>
+            <h3>Role: {newMember.role}</h3>
         </div>
     )
 }

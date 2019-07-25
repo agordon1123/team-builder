@@ -1,8 +1,22 @@
-Lets break down our App's form functionality:
+## Lets break down our App's form functionality:
 
-First, in App.js, we import the data (teamArray) from the relative path. Also import useState. In the return portion of the App, we map over the data (an array of objects) and create a component for each index of the array. Now would be a good time to set up our component.
+First, in App.js, we import the data (teamArray) from the relative path. 
 
+Next, import useState. We create two variables, here: team and setTeam. Set the state of the app to an empty array. This 
+is where we will store our input data from the form.
 
+Below, we create a function that takes in newMember as a prop and calls setTeam, spreading out the team
+variable that is set as our initial state key, and newMember as the new value.
+
+In the return portion of the App, we map over the state and create a List component for each index
+of the array, passing in the 'value' in our start that we set above. Now would be a good time to set up our component.
+
+Within our List component, we pass in that value as a prop. In the return portion, we pass in the { value.name, value.email,
+value.name } that will display our input data from the form. 
+
+Back within our app component, we pull in and render our Form component, passing in 
+
+**********************************************************************************************************************************
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

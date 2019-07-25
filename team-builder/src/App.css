@@ -1,8 +1,9 @@
 .App {
   text-align: center;
-  width: 75%;
+  width: 50%;
   margin: 20px auto;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 .divider {
   border-top: 1px solid black;

@@ -5,9 +5,9 @@ const TeamMemberList = ({newMember}) => {
     return (
         <div>
             <div className='divider' />
-            <h3>Name: {newMember.name}</h3>
-            <h3>Email: {newMember.email}</h3>
-            <h3>Role: {newMember.role}</h3>
+            <p>Name: {newMember.name}</p>
+            <p>Email: {newMember.email}</p>
+            <p>Role: {newMember.role}</p>
         </div>
     )
 }

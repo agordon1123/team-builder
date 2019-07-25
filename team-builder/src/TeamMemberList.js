@@ -1,15 +1,13 @@
 import React from 'react';
-import teamArray from './data';
 
-const TeamMemberList = () => {
+const TeamMemberList = ({props}) => {
+    console.log('props', props)
     return (
         <div>
-            <h1>View your team members below</h1>
-            <p className='teamList'>{teamArray.map(member => {
-                return (
-                    member.name + ' ' + member.email + ' ' + member.role + ', '
-                )
-            })}</p>
+            <div class='divider' />
+            <h3>Name: {props.name}</h3>
+            <h3>Email: {props.email}</h3>
+            <h3>Role: {props.role}</h3>
         </div>
     )
 }

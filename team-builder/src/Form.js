@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Form = () => {
+const Form = (props) => {
     const [teamMember, setTeamMember] = useState({
         name: '',
         email: '',
@@ -20,40 +20,50 @@ const Form = () => {
     
     function handleSubmit(event) {
         event.preventDefault();
+        props.teamAdd(teamMember);
     }
 
     return (
         <div className='form'>
             <h1>Please fill out the form below</h1>
             <form onSubmit={handleSubmit}>
-                <input 
-                    type='text'
-                    className='nameInput'
-                    name='name'
-                    placeholder='Enter your name'
-                    value={teamMember.name}
-                    onChange={handleChange}
-                />
+                <label>
+                    Name: 
+                    <input 
+                        type='text'
+                        className='nameInput'
+                        name='name'
+                        placeholder='Enter your name'
+                        value={teamMember.name}
+                        onChange={event => handleChange(event)}
+                    />
+                </label>
                 <br />
                 <br />
-                <input 
-                    type='email'
-                    className='emailInput'
-                    name='email'
-                    placeholder='example@me.com'
-                    value={teamMember.email}
-                    onChange={handleChange}
-                />
+                <label>
+                    Email:
+                    <input 
+                        type='email'
+                        className='emailInput'
+                        name='email'
+                        placeholder='example@me.com'
+                        value={teamMember.email}
+                        onChange={event => handleChange(event)}
+                    />
+                </label>
                 <br />
                 <br />
-                <input 
-                    type='text'
-                    className='nameInput'
-                    name='role'
-                    placeholder='What is your role?'
-                    value={teamMember.role}
-                    onChange={handleChange}
-                />
+                <label>
+                    Email:
+                    <input 
+                        type='text'
+                        className='nameInput'
+                        name='role'
+                        placeholder='What is your role?'
+                        value={teamMember.role}
+                        onChange={event => handleChange(event)}
+                    />
+                </label>
                 <br />
                 <br />
                 <button type='submit'>Submit</button>

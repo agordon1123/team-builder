@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
+import { Route, Link } from 'react-router-dom';
 
-import Form from './Form';
-import TeamMemberList from './TeamMemberList';
+import Form from './components/Form';
+import TeamMemberList from './components/TeamMemberList';
 
 function App() {
   const [team, setTeam] = useState([
@@ -16,13 +17,13 @@ function App() {
 
   return (
     <div className="App">
-      <Form teamAdd={teamChange} />
-      <h3>View your team members below</h3>
-      <>
-        {team.map((member, i) => (
-          <TeamMemberList key={i} newMember={member} />
-        ))}
-      </>
+      <Link to='/'>Home</Link>{' '}
+      <Link to='/add'>Add-Teammate</Link>
+      <Route exact path='/'
+             render={props => team.map((member, i) => (
+              <TeamMemberList key={i} newMember={member} />))} />
+      <Route path='/add'
+             render={props => <Form {...props} teamAdd={teamChange} />} />
     </div>
   );
 }
